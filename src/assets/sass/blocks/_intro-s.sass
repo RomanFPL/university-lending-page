@@ -45,4 +45,74 @@
                 margin-right: 10px
                 margin-bottom: 10px
     .buiding
-        width: 40%
+        width: 35%
+        position: relative
+        z-index: 2
+    .feedback
+        height: 330px
+        background: #fff
+        width: 1800px
+        margin: 0 auto
+        padding: 80px
+        transform: translateY(-60px);
+        h2
+            font-size: 32px
+            font-weight: 700
+            margin-bottom: 30px
+        .main-field
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            gap: 0 20px
+            input, button
+                height: 70px
+                padding: 15px
+                border: solid 1px #000
+                outline: none
+                background: #fff
+            button
+                color: #fff
+                background: #003ADC
+                font-weight: 700
+                font-size: 20px
+        label
+            margin-top: 20px
+            font-size: 12px
+        [type="checkbox"] + label
+            display: flex
+            cursor: pointer
+            margin-left: 12px
+        [type="checkbox"]
+            display: none
+        [type="checkbox"] + label:before
+            display: flex
+            content: "\2714"
+            border: 0.5px solid #000
+            width: 20px
+            height: 20px
+            margin-right: 10px
+            padding: auto
+            align-items: center
+            justify-content: center
+            color: transparent
+            transition: .2s
+        input[type=checkbox] + label:active:before 
+             transform: scale(0)
+        input[type=checkbox]:checked + label:before 
+            background-color: #003ADC
+            border-color: #003ADC
+            color: #fff
+        input[type=checkbox]:disabled + label:before 
+            transform: scale(1)
+            border-color: #aaa
+        input[type=checkbox]:checked:disabled + label:before 
+            transform: scale(1)
+            background-color: #bfb
+            border-color: #bfb
+            
+
+
+
+
+
+
+                
