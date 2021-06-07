@@ -1,0 +1,64 @@
+.education-programs
+    position: relative
+    margin-top: 260px
+    h2
+        margin-top: 100px
+    .wrap-edu-form
+        margin-top: 45px
+        display: grid
+        gap: 20px 160px 
+        grid-template: 1fr 1fr / 1fr 1fr
+        .edu-form
+            position: relative
+            z-index: 5
+            .number-edu
+                position: absolute
+                z-index: -1
+                right: 50px
+                top: 50%
+                transform: translateY(-40%)
+                font-weight: 900
+                font-size: 130px
+                color: #FFD5AD
+                &::after
+                    content: ""
+                    display: block
+                    position: absolute
+                    z-index: 10
+                    top: 80px
+                    right: 0
+                    transform: 
+                    width: 100px
+                    height: 1px
+                    background: #fff
+                    transform: rotate(-30deg)
+                &::before
+                    content: ""
+                    display: block
+                    position: absolute
+                    z-index: 10
+                    top: 90px
+                    right: 0
+                    transform: 
+                    width: 100px
+                    height: 1px
+                    background: #fff
+                    transform: rotate(-30deg)
+        h3
+            font-weight: 700
+            font-size: 32px
+            color: #003ADC
+        span 
+            display: block
+            font-size: 32px
+            font-weight: 900
+            margin-bottom: 10px
+    .down-link
+        margin: 0 auto
+        margin-top: 75px
+        margin-bottom: 120px
+    .money
+        position: absolute
+        bottom: -150px
+        right: -150px
+        width: 30%
