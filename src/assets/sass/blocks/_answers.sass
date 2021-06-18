@@ -1,0 +1,48 @@
+.answers 
+    margin-top: 100px
+    padding-top: 100px
+    padding-bottom: 30px
+    background: #EFF2F9
+    .container
+        position: relative  
+    h2
+        text-align: center
+    .question
+        position: absolute
+        width: 300px
+        right: 50px
+        top: -170px
+    .wrap-answer-item
+        .answer-item
+            margin-bottom: 15px
+            background: #fff
+            padding: 15px
+            box-sizing: border-box
+            position: relative
+            h3
+                display: inline-block
+                margin: 10px 0
+                font-family: Proxima Nova
+                font-size: 20px
+            p
+                display: none
+                margin: 0
+                font-weight: 500
+                font-size: 16px
+            .wrap-plus
+                cursor: pointer
+                position: absolute
+                right: 2%
+                top: 50%
+                &:focus
+                    background: #000
+                span
+                    display: block
+                    width: 20px
+                    height: 3px
+                    background: #000
+                    &:last-child
+                        transform: rotate(90deg) translateX(-2px)
+    .feedback
+        transform: translateY(180px)
+
