@@ -97,12 +97,53 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_method__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/method */ "./src/js/modules/method.js");
 /* harmony import */ var _modules_test_f__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/test-f */ "./src/js/modules/test-f.js");
+/* harmony import */ var _modules_maps__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/maps */ "./src/js/modules/maps.js");
+
 
 
 
 
 new _modules_method__WEBPACK_IMPORTED_MODULE_0__["default"]().sayIt();
 Object(_modules_test_f__WEBPACK_IMPORTED_MODULE_1__["showStatus"])();
+Object(_modules_maps__WEBPACK_IMPORTED_MODULE_2__["initialize"])();
+
+/***/ }),
+
+/***/ "./src/js/modules/maps.js":
+/*!********************************!*\
+  !*** ./src/js/modules/maps.js ***!
+  \********************************/
+/*! exports provided: initialize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialize", function() { return initialize; });
+
+
+const initialize = () => {
+  let myLatlng = new google.maps.LatLng(55.78367643143814, 37.71923783732045);
+  let myOptions = {
+    zoom: 16,
+    center: myLatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  let contentString = '<div id="content">Приймальна комисия</div>';
+  let infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+  let marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title: "м. Семеновская, ул. Измайловский вал, дом 2"
+  });
+  google.maps.event.addListener(marker, 'click', function () {
+    infowindow.open(map, marker);
+  });
+};
+
+
 
 /***/ }),
 
